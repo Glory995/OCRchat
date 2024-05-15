@@ -7,6 +7,7 @@ function App() {
   const [message, setMessage] = useState("");
   const [showChatInput, setShowChatInput] = useState(false);
   const [reply, setReply] = useState(null);
+  const [errorhand, setErrorhand] = useState(null);
 
   const handleImageChange = (event) => {
     const selectedImage = event.target.files[0];
@@ -60,6 +61,7 @@ function App() {
       .catch((error) => {
         console.error("Error uploading image:", error);
         // Handle error if needed
+        setErrorhand(" not working");
       });
   };
 
@@ -87,7 +89,7 @@ function App() {
       })
       .catch((error) => {
         console.error("Error sending", error);
-        // Handle error if needed
+        
       });
   };
 
@@ -135,6 +137,12 @@ function App() {
               Start chat
             </button>
           ) : null}
+
+          <div>
+            {errorhand ? (
+              <p class="text-red-500">Error: Endpoint not found.</p>
+            ) : null}
+          </div>
         </div>
         <div className="bg-gradient-to-br from-gray-700 to-gray-600 w-[90%] rounded-lg m-4  sm:h-[95%]  md:h-[95%] lg:h-[95%]">
           {showChatInput ? (
