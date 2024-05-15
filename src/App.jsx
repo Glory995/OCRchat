@@ -93,9 +93,9 @@ function App() {
 
   return (
     <div className="flex items-center justify-center h-screen bg-blue-500">
-      <div className="flex w-[70%] h-[80%] justify-center bg-blue-600 rounded-lg">
-        <div className="bg-white w-[30%] m-4 rounded-lg">
-          <div className="bg-gray-100 rounded-lg h-[50%]">
+      <div className="flex sm:flex-row flex-col w-[90%] h-[80%] justify-center bg-blue-600 rounded-lg  lg:w-[70%]">
+        <div className="bg-white h-[95%] justify-center items-centerw-[90%] lg:h-[95%] m-4 rounded-lg sm:w-full">
+          <div className="bg-gray-100  rounded-lg h-[50%] sm:w-[100%] ">
             {image ? (
               <img
                 src={image}
@@ -136,7 +136,7 @@ function App() {
             </button>
           ) : null}
         </div>
-        <div className="bg-gradient-to-br from-gray-700 to-gray-600 w-[60%] rounded-lg m-4">
+        <div className="bg-gradient-to-br from-gray-700 to-gray-600 w-[90%] rounded-lg m-4  sm:h-[95%]  md:h-[95%] lg:h-[95%]">
           {showChatInput ? (
             <>
               {reply && (
@@ -169,13 +169,13 @@ function App() {
                 An OCR you can chat with make life easy hurray
               </h2>
               <div className="flex justify-center mt-8 space-x-8">
-                <div className="w-32 h-32 bg-blue-500 rounded-lg flex items-center justify-center text-white">
+                <div className="w-32 h-32 bg-blue-500 rounded-lg flex items-center justify-center text-center text-white">
                   Better life
                 </div>
-                <div className="w-32 h-32 bg-green-500 rounded-lg flex items-center justify-center text-white">
+                <div className="w-32 h-32 bg-green-500 rounded-lg flex items-center justify-center text-center text-white">
                   Get insight
                 </div>
-                <div className="w-32 h-32 bg-yellow-500 rounded-lg flex items-center justify-center text-white">
+                <div className="w-32 h-32 bg-yellow-500 rounded-lg flex items-center justify-center text-center text-white">
                   How lovely
                 </div>
               </div>
